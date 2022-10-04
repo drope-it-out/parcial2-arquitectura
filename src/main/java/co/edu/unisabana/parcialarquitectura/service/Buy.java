@@ -1,9 +1,10 @@
 package co.edu.unisabana.parcialarquitectura.service;
 
 
+import co.edu.unisabana.parcialarquitectura.Conexion;
 import co.edu.unisabana.parcialarquitectura.repository.Database;
 
-public class Buy {
+public class Buy implements Conexion {
   private Database database = new Database();
   public Buy(Database database){
     this.database = database;
@@ -18,5 +19,13 @@ public class Buy {
     } else {
       return "The sale was not possible";
     }
+  }
+  @Override
+  public void getData() {
+
+  }
+  @Override
+  public void setData() {
+
   }
 }
